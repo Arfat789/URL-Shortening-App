@@ -3,6 +3,8 @@ const validButton = document.getElementById('valid-btn')
 const errorText = document.getElementById('errorText')
 const linkContainer = document.getElementById('linkContainer')
 const copy = document.querySelectorAll('copy')
+const hamBurger = document.getElementById('hamburger')
+const topBar = document.querySelector('.top-bar')
 
 
 
@@ -139,3 +141,8 @@ input.addEventListener('keydown', function (event) {
   }
   }
 });
+
+hamBurger.addEventListener('click',()=>{
+  console.log('clicked')
+   topBar.classList.toggle('active')
+})

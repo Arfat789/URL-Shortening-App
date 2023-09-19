@@ -10,8 +10,10 @@
     font-family: 'Poppins', sans-serif;
     font-family: 'Raleway', sans-serif;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
 
 }
+
 :root {
    
     --primary-color:  hsl(180, 66%, 49%);
@@ -21,6 +23,7 @@
     --secondory-text-color:hsl(257, 7%, 63%);
     --main-text-color:hsl(255, 11%, 22%);
     --primary-text-color:hsl(260, 8%, 14%);
+    --margin-inline:90px
 }
 /* usabilites */
 .flex{
@@ -39,6 +42,10 @@ p{
     font-size: 18px;
 }
 
+#hamburger{
+    display: none;
+    cursor: pointer;
+}
 
 
 /* the following part is for nav */
@@ -51,7 +58,7 @@ font-weight: bold;
 #errorText{
     color: var(--text-validtion-color);
     margin-top: 10px;
-    margin-left: 10px;
+    margin: 10px;
 }
 li{
     list-style: none;
@@ -62,9 +69,9 @@ li:hover{
 }
 
 nav{
-margin-inline:70px;
+margin-inline:var(--margin-inline);
 align-items: center;
-padding: 20px;
+padding-block: 20px;
 gap: 20px;
 }
 
@@ -97,12 +104,11 @@ gap: 20px;
 /* the header starts form here */
 header{
     display: flex;
-    /* margin-inline: 90px; */
     justify-content: space-between;
     gap: -20px;
 }
 .header-left-side{
-    margin-left: 90px;
+    margin-left: var(--margin-inline);
     display: flex;
     flex-direction: column;
     width: 30vw;
@@ -124,6 +130,7 @@ header{
 
 /* link section styling */
 .link-input-section{
+    overflow-x:visible;
     /* display: flex; */
     align-items: center;
     justify-content: space-evenly;
@@ -134,7 +141,7 @@ header{
     background-position: center;
     display: flex;
     justify-content: center;
-    margin-inline:90px;
+    margin-inline:var(--margin-inline);
     background-color: var(--primary-bg-color);
     padding-block: 20px;
     border-radius: 10px;
@@ -163,6 +170,12 @@ form{
     flex-direction: column;
 }
 
+.top-bar{
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+
 
 input{
     padding: 6px 12px;
@@ -179,6 +192,7 @@ input{
 }
 
 .link-output-container{
+    overflow-x:visible;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -189,19 +203,24 @@ input{
     gap: 20px;
     display: flex;
     justify-content: space-between;
-    padding-inline: 80px;
+    /* padding-inline: 80px; */
     background-color: white;
     align-items: center;
     padding-block: 5px;
-    margin-inline: 90px;
+    margin-inline: var(--margin-inline);
     border-radius: 10px;
     transition: 1s linear;
+    width: 100%;
     
 }
 .right-div{
    gap: 10px;
    align-items: center;
+   width: 100%;
 
+}
+.right-div button{
+    width: 100%;
 }
 .right-div p{
     color: var(--primary-color);
@@ -220,10 +239,11 @@ input{
 }
 
 .little-title p{
-    width: 500px;
+    /* width: 500px; */
     text-align:center;
     color: rgb(44, 43, 43);
     text-shadow: 0px 0px 5px rgb(0, 0, 0);
+    margin-inline: var(--margin-inline);
 }
 .little-title h2{
     font-weight: bold;
@@ -237,8 +257,9 @@ input{
     background-color: var(--secondory-bg-color);
     padding-block: 50px;
     display: flex;
-    justify-content: space-between;
-    padding-inline: 90px;
+    justify-content: center;
+    padding-inline: var(--margin-inline); 
+     /* margin-inline: var(--margin-inline); */
 }
 
 .brand-box{
@@ -248,6 +269,7 @@ input{
     border-radius: 3px;
     height: 250px;
     z-index: 2;
+    overflow-x:visible;
     /* overflow: hidden; */
 }
 .brand-box img{
@@ -266,7 +288,7 @@ input{
     position: relative;
     top: -15px;
 }
-.danda{
+/* .danda{
     position: relative;
     width: 700px;
     height: 10px;
@@ -274,7 +296,7 @@ input{
     left: 300px;
     bottom: 200px;
     background-color: var(--secondory-bg-color);
-}
+} */
 
 
 /* boost links section */
