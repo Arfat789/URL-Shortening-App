@@ -23,7 +23,8 @@
     --secondory-text-color:hsl(257, 7%, 63%);
     --main-text-color:hsl(255, 11%, 22%);
     --primary-text-color:hsl(260, 8%, 14%);
-    --margin-inline:90px
+    --margin-inline:90px;
+     --dark-viloet: hsl(255, 11%, 22%);
 }
 /* usabilites */
 .flex{
@@ -88,15 +89,20 @@ gap: 20px;
    font-weight: bold;
    cursor: pointer;
 }
+.btn-login:hover{
+    color: var(--primary-text-color);
+}
 
 .btn-signup{
     border: none;
-    padding: 5px 12px;
+    padding: 9px 20px;
     border-radius: 15px;
     cursor: pointer;
     background-color: var(--primary-color);
     color: white;
     font-weight: bolder;
+}.btn-signup:hover{
+ filter: brightness(1.2);
 }
 
 
@@ -163,6 +169,9 @@ header{
     height: 40px;
     
 }
+.link-input-section button:hover{
+   filter: brightness(1.2);
+}
 
 form{
     width: 80%;
@@ -172,7 +181,8 @@ form{
 
 .top-bar{
     align-items: center;
-    gap: 20px;
+    /* gap: 20px; */
+    width: 100%;
     justify-content: space-between;
 }
 
@@ -203,25 +213,23 @@ input{
     gap: 20px;
     display: flex;
     justify-content: space-between;
-    /* padding-inline: 80px; */
+    padding-inline: var(--margin-inline);
     background-color: white;
     align-items: center;
     padding-block: 5px;
     margin-inline: var(--margin-inline);
     border-radius: 10px;
     transition: 1s linear;
-    width: 100%;
+    /* width: 100%; */
     
 }
 .right-div{
    gap: 10px;
    align-items: center;
-   width: 100%;
+   /* width: 100%; */
 
 }
-.right-div button{
-    width: 100%;
-}
+
 .right-div p{
     color: var(--primary-color);
 }
@@ -254,10 +262,11 @@ input{
 /* thois is btand section */
 
 .brand-section{
+    /* gap: 20px; */
     background-color: var(--secondory-bg-color);
     padding-block: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding-inline: var(--margin-inline); 
      /* margin-inline: var(--margin-inline); */
 }

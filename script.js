@@ -24,8 +24,6 @@ const topBar = document.querySelector('.top-bar')
 
 
 let linkArray = []
-
-
 async function fetchData(link) {
   const url = 'https://api.shrtco.de/v2/shorten?url=' + link;
   try {
@@ -48,7 +46,6 @@ validButton.addEventListener('click', async()=>{
       errorText.textContent = "";
       input.style.border = ""; 
       addToList()
-     
   }
 })
 
